@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="28" viewBox="0 0 116 28">
+  <rect width="73" height="28" rx="4" fill="#1a2230"/>
+  <rect x="73" width="43" height="28" rx="4" fill="#ff006e"/>
+  <rect x="73" width="4" height="28" fill="#ff006e"/>
+  <g font-family="'Segoe UI',Verdana,Arial,sans-serif" font-size="12" font-weight="600">
+    <text x="36" y="18.5" fill="#cfe6ff" text-anchor="middle">license</text>
+    <text x="94" y="18.5" fill="#020408" text-anchor="middle" font-weight="800">MIT</text>
+  </g>
+</svg>

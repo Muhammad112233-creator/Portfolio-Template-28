@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="260" viewBox="0 0 1140 260">
+  <defs>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f5ff">
+        <animate attributeName="stop-color" values="#00f5ff;#bf00ff;#ff006e;#ffee00;#00ff88;#00f5ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#bf00ff">
+        <animate attributeName="stop-color" values="#bf00ff;#ff006e;#ffee00;#00ff88;#00f5ff;#bf00ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="rainbow2" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#00ff88">
+        <animate attributeName="stop-color" values="#00ff88;#00f5ff;#bf00ff;#ff006e;#ffee00;#00ff88" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#ffee00">
+        <animate attributeName="stop-color" values="#ffee00;#00ff88;#00f5ff;#bf00ff;#ff006e;#ffee00" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.03"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1140" height="260" rx="14" fill="#020408"/>
+  <rect width="1140" height="260" rx="14" fill="url(#scan)"/>
+  <rect x="1.5" y="1.5" width="1137" height="257" rx="13" fill="none" stroke="url(#rainbow)" stroke-width="2" opacity=".85"/>
+
+  <!-- orbit rings -->
+  <g fill="none" stroke="url(#rainbow2)" stroke-width="1.4" opacity=".75">
+    <ellipse cx="165" cy="130" rx="86" ry="86" stroke-dasharray="5 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 165 130" to="360 165 130" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="165" cy="130" rx="66" ry="66" stroke-dasharray="3 6" opacity=".6">
+      <animateTransform attributeName="transform" type="rotate" from="360 165 130" to="0 165 130" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <circle cx="165" cy="130" r="34" fill="url(#rainbow)" opacity=".22"/>
+  <path d="M165 102 l9 19 21 2 -15 14 4 21 -19 -10 -19 10 4 -21 -15 -14 21 -2 z" fill="none" stroke="url(#rainbow)" stroke-width="2.4" filter="url(#glow)"/>
+
+  <!-- title -->
+  <text x="300" y="118" font-family="'Segoe UI',Verdana,Arial,sans-serif" font-size="64" font-weight="800" letter-spacing="10" fill="url(#rainbow)" filter="url(#glow)">NOVA.SYS</text>
+  <text x="304" y="158" font-family="'Consolas','Courier New',monospace" font-size="19" letter-spacing="6" fill="#d7f6ff" opacity=".85">HUD PORTFOLIO TEMPLATE</text>
+  <text x="304" y="190" font-family="'Consolas','Courier New',monospace" font-size="14" letter-spacing="3" fill="#5f8ea3">zero dependencies · vanilla html / css / js · two modes · three languages</text>
+
+  <!-- flowing wave -->
+  <path id="wave" d="M0 232 Q 95 218 190 232 T 380 232 T 570 232 T 760 232 T 950 232 T 1140 232" fill="none" stroke="url(#rainbow)" stroke-width="3" filter="url(#glow)">
+    <animate attributeName="d"
+      values="M0 232 Q 95 218 190 232 T 380 232 T 570 232 T 760 232 T 950 232 T 1140 232;
+              M0 232 Q 95 246 190 232 T 380 232 T 570 232 T 760 232 T 950 232 T 1140 232;
+              M0 232 Q 95 218 190 232 T 380 232 T 570 232 T 760 232 T 950 232 T 1140 232"
+      dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- sparkles -->
+  <g fill="#ffffff">
+    <circle cx="1010" cy="52" r="2"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+    <circle cx="1068" cy="96" r="1.6"><animate attributeName="opacity" values="0;1;0" dur="3s" begin=".7s" repeatCount="indefinite"/></circle>
+    <circle cx="940" cy="40" r="1.4"><animate attributeName="opacity" values="0;1;0" dur="2.8s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="1040" cy="150" r="1.8"><animate attributeName="opacity" values="0;1;0" dur="3.4s" begin=".4s" repeatCount="indefinite"/></circle>
+    <circle cx="330" cy="52" r="1.6"><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="1s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="12" viewBox="0 0 1140 12">
+  <defs>
+    <linearGradient id="flow" x1="0" y1="0" x2=".5" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#00f5ff"/>
+      <stop offset=".2" stop-color="#00ff88"/>
+      <stop offset=".4" stop-color="#ffee00"/>
+      <stop offset=".6" stop-color="#ff006e"/>
+      <stop offset=".8" stop-color="#bf00ff"/>
+      <stop offset="1" stop-color="#00f5ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="1 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="3" width="1140" height="6" rx="3" fill="url(#flow)" opacity=".9"/>
+</svg>

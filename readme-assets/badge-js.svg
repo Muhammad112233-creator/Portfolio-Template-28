@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="186" height="28" viewBox="0 0 186 28">
+  <rect width="94" height="28" rx="4" fill="#1a2230"/>
+  <rect x="94" width="92" height="28" rx="4" fill="#ffee00"/>
+  <rect x="94" width="4" height="28" fill="#ffee00"/>
+  <g font-family="'Segoe UI',Verdana,Arial,sans-serif" font-size="12" font-weight="600">
+    <text x="47" y="18.5" fill="#cfe6ff" text-anchor="middle">powered by</text>
+    <text x="140" y="18.5" fill="#020408" text-anchor="middle" font-weight="800">VANILLA JS</text>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ayaan Malik | Portfolio (Pro Mode)</title>
+<meta name="description" content="Pro Mode — three-dimensional cockpit experience of Ayaan Malik's portfolio.">
+<meta name="theme-color" content="#020408">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020408'/%3E%3Cpath d='M16 4l3.4 8.6H28l-7 5.4 2.6 8.4L16 21l-7.6 5.4L11 18l-7-5.4h8.6z' fill='none' stroke='%23ffee00' stroke-width='1.6'/%3E</svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pro.css">
+</head>
+<body>
+
+<a href="#pro-summary" class="skip-link">Skip to summary</a>
+<main id="pro-summary" class="visually-hidden">
+  <h1>Ayaan Malik — Pro Mode cockpit</h1>
+  <p>Three-dimensional cockpit view of the portfolio. Use the five pods to open About, Projects, Skills, Hobbies and Contact.</p>
+</main>
+
+<canvas id="space" aria-hidden="true"></canvas>
+
+<!-- cockpit frame -->
+<svg id="cockpit" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="frameG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020408" stop-opacity=".95"/>
+      <stop offset=".12" stop-color="#020408" stop-opacity=".25"/>
+      <stop offset=".5" stop-color="#020408" stop-opacity="0"/>
+      <stop offset=".9" stop-color="#020408" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#020408" stop-opacity=".97"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#frameG)"/>
+  <g fill="none" stroke="#ffee00" stroke-opacity=".5" stroke-width="1.4">
+    <path d="M40 120 L120 40 H330 M870 40 H1080 L1160 120" />
+    <path d="M40 680 L120 760 H420 M780 760 H1080 L1160 680" />
+  </g>
+  <g stroke="#ffee00" stroke-opacity=".28" stroke-width="1">
+    <path d="M600 60 V20 M580 24 h40" transform="translate(0,6)"/>
+    <path d="M470 740 h260 M600 740 v30" />
+  </g>
+  <g fill="#ffee00" fill-opacity=".55" font-family="'Share Tech Mono',monospace" font-size="12" letter-spacing="3">
+    <text x="52" y="150">CAM-04 · EXT</text>
+    <text x="52" y="672" id="sys-log-line">LINK ESTABLISHED</text>
+    <text x="1080" y="150" text-anchor="end" id="cockpit-clock">00:00:00</text>
+    <text x="1080" y="672" text-anchor="end">31.52°N 74.35°E</text>
+    <text x="352" y="52">NOVA.SYS // COCKPIT v3.7</text>
+  </g>
+  <!-- canopy ribs -->
+  <g stroke="#ffee00" stroke-opacity=".14" stroke-width="2" fill="none">
+    <path d="M0 0 Q300 240 600 250 Q900 240 1200 0"/>
+    <path d="M0 800 Q300 560 600 550 Q900 560 1200 800"/>
+    <path d="M0 0 Q220 400 0 800"/>
+    <path d="M1200 0 Q980 400 1200 800"/>
+  </g>
+</svg>
+
+<div id="reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<!-- pods are positioned by JS -->
+<div id="pod-layer" role="application" aria-label="Cockpit pod navigation"></div>
+
+<!-- cockpit HUD -->
+<div id="pro-hud">
+  <a id="pro-exit" href="../" title="Default mode">◄ EXIT COCKPIT</a>
+  <div class="pro-hud-right">
+    <div id="warp-wrap">
+      <span>WARP</span>
+      <input type="range" id="warp" min="1" max="10" step="1" value="3" aria-label="Warp speed">
+    </div>
+    <div class="pro-langs">
+      <button class="p-lang active" data-lang="en" type="button">EN</button>
+      <button class="p-lang" data-lang="tr" type="button">TR</button>
+      <button class="p-lang" data-lang="de" type="button">DE</button>
+    </div>
+    <button id="pro-fs" type="button" title="Fullscreen">⛶</button>
+  </div>
+</div>
+
+<div id="pro-tip">◄ ► SELECT POD &nbsp;·&nbsp; ENTER TO OPEN &nbsp;·&nbsp; ESC TO CLOSE</div>
+
+<!-- console overlay -->
+<div id="console" aria-hidden="true">
+  <div class="console-frame">
+    <header class="console-head">
+      <span class="console-tag" id="console-tag">POD</span>
+      <h2 id="console-title">—</h2>
+      <button id="console-close" type="button" aria-label="Close console">✕</button>
+    </header>
+    <div id="console-body" tabindex="0"></div>
+    <footer class="console-foot">NOVA.SYS // COCKPIT <span class="cblink">▊</span></footer>
+  </div>
+</div>
+
+<div id="pro-intro"><div class="pro-intro-inner"><b>PRO MODE</b><span id="pro-intro-sub">COCKPIT LINK ESTABLISHED</span></div></div>
+
+<div id="fx-scanlines" aria-hidden="true"></div>
+
+<script src="pro.js"></script>
+</body>
+</html>

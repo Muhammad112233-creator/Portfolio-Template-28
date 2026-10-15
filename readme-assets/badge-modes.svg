@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="28" viewBox="0 0 200 28">
+  <rect width="59" height="28" rx="4" fill="#1a2230"/>
+  <rect x="59" width="141" height="28" rx="4" fill="#00a8ff"/>
+  <rect x="59" width="4" height="28" fill="#00a8ff"/>
+  <g font-family="'Segoe UI',Verdana,Arial,sans-serif" font-size="12" font-weight="600">
+    <text x="30" y="18.5" fill="#cfe6ff" text-anchor="middle">modes</text>
+    <text x="130" y="18.5" fill="#020408" text-anchor="middle" font-weight="800">2 MODES / 3 LANGS</text>
+  </g>
+</svg>
