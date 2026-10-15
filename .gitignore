@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Optional tooling (not used by this template, ignored just in case)
+node_modules/
+dist/
+build/
+.env
